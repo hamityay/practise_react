@@ -13,3 +13,7 @@ python -m http.server
 # If Python version is above is 2.X
 python -m SimpleHTTPServer
 ```
+
+### Reasct sample Scoreboard
+
+Simple scoreboard app includes one container and two components.
