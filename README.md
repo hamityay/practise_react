@@ -1,4 +1,4 @@
-## Practicing with React
+## Practising  with React
 
 To practice with react basics.
 
