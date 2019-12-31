@@ -30,14 +30,16 @@ const Header = (props) => {
   );
 }
 
-const Counter = (props) => {
-  return (
-    <div className="counter">
-      <button className="counter-action decrement"> - </button>
-      <span className="counter-score">{ props.score }</span>
-      <button className="counter-action increment"> + </button>
-    </div>
-  );
+class Counter extends React.Component {
+  rebder() {
+    return(
+      <div className="counter">
+        <button className="counter-action decrement"> - </button>
+        <span className="counter-score">{ this.props.score }</span>
+        <button className="counter-action increment"> + </button>
+      </div>
+    );
+  }
 }
 
 const Player = (props) => {
