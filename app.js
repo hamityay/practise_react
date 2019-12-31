@@ -4,6 +4,7 @@ const name = 'HMT';
 
 const header = (
   <header>
+  {/* This is acomment */}
     <h1 id={ myTitleId }>{ name }'s first React element</h1>
     <p calssName="main-desc">{ desc }</p>
     <input value={ 10 * 20 } />
