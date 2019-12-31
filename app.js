@@ -6,6 +6,7 @@ const header = (
   <header>
     <h1 id={ myTitleId }>{ name }'s first React element</h1>
     <p calssName="main-desc">{ desc }</p>
+    <input value={ 10 * 20 } />
   </header>
 );
 
