@@ -1,17 +1,21 @@
 const players = [
   {
+    id: 1,
     name: "Guil",
     score: 50
   },
   {
+    id: 2,
     name: "Treasure",
     score: 85
   },
   {
+    id: 3,
     name: "Ashley",
     score: 95
   },
   {
+    id: 4,
     name: "James",
     score: 80
   }
@@ -61,6 +65,7 @@ const App = (props) => {
       {/* Player list */}
       { props.initialPlayers.map( player =>
         <Player
+          key={ player.id.toString() }
           name={ player.name }
           score={ player.score }
         />
