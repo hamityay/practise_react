@@ -1,3 +1,22 @@
+const players = [
+  {
+    name: "Guil",
+    score: 50
+  },
+  {
+    name: "Treasure",
+    score: 85
+  },
+  {
+    name: "Ashley",
+    score: 95
+  },
+  {
+    name: "James",
+    score: 80
+  }
+];
+
 const Header = (props) => {
   return (
     <header>
@@ -31,24 +50,26 @@ const Player = (props) => {
   );
 }
 
-const App = () => {
+const App = (props) => {
   return (
     <div className="scoreboard">
       <Header 
         title="Scoreboard"
-        totalPlayer={1}
+        totalPlayer={ props.initialPlayers.length }
       />
 
       {/* Player list */}
-      <Player name="HMT" score={10} />
-      <Player name="Nate" score={25} />
-      <Player name="Darke" score={18} />
-      <Player name="Sully" score={35} />
+      { props.initialPlayers.map( player =>
+        <Player
+          name={ player.name }
+          score={ player.score }
+        />
+      )}
     </div>
   );
 }
 
 ReactDOM.render(
-  <App />,
+  <App initialPlayers={players} />,
   document.getElementById('root')
 );
